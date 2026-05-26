@@ -3,301 +3,409 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CLVCA Policy & Support Center</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --primary:#2563eb;
-      --primary-hover:#1d4ed8;
-      --bg:#f8fafc;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#64748b;
-      --border:#e2e8f0;
-      --success:#16a34a;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      font-family:'Inter',sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(37,99,235,0.08), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(37,99,235,0.05), transparent 30%),
-        var(--bg);
-      color:var(--text);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-    }
-
-    .wrapper{
-      width:100%;
-      max-width:520px;
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:24px;
-      padding:38px 30px;
-      box-shadow:
-        0 20px 25px -5px rgba(15,23,42,0.05),
-        0 10px 10px -5px rgba(15,23,42,0.02);
-    }
-
-    .top-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      font-size:12px;
-      font-weight:600;
-      color:var(--success);
-      background:#f0fdf4;
-      border:1px solid #dcfce7;
-      padding:6px 12px;
-      border-radius:999px;
-      margin-bottom:18px;
-    }
-
-    .logo{
-      width:74px;
-      height:74px;
-      border-radius:22px;
-      background:linear-gradient(135deg,var(--primary),#3b82f6);
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:26px;
-      font-weight:800;
-      letter-spacing:-0.03em;
-      box-shadow:0 16px 24px rgba(37,99,235,0.28);
-      margin-bottom:22px;
-    }
-
-    h1{
-      font-size:1.9rem;
-      line-height:1.15;
-      letter-spacing:-0.03em;
-      margin-bottom:12px;
-    }
-
-    .subtitle{
-      color:var(--muted);
-      font-size:0.98rem;
-      line-height:1.6;
-      margin-bottom:28px;
-    }
-
-    .section-label{
-      font-size:0.78rem;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      color:var(--muted);
-      font-weight:700;
-      margin-bottom:14px;
-    }
-
-    .links{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-
-    .link-card{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      text-decoration:none;
-      color:var(--text);
-      padding:18px 18px;
-      border:1px solid var(--border);
-      border-radius:16px;
-      background:#fff;
-      transition:all .2s ease;
-    }
-
-    .link-card:hover{
-      transform:translateY(-2px);
-      border-color:rgba(37,99,235,0.45);
-      background:#f8fbff;
-      box-shadow:0 10px 20px rgba(37,99,235,0.08);
-    }
-
-    .left{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
-    }
-
-    .icon-box{
-      width:44px;
-      height:44px;
-      border-radius:12px;
-      background:#eff6ff;
-      color:var(--primary);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:1.15rem;
-      flex-shrink:0;
-    }
-
-    .text-group{
-      min-width:0;
-    }
-
-    .title{
-      font-size:0.97rem;
-      font-weight:700;
-      margin-bottom:3px;
-    }
-
-    .desc{
-      font-size:0.82rem;
-      color:var(--muted);
-      line-height:1.45;
-    }
-
-    .arrow{
-      color:var(--primary);
-      font-size:1rem;
-      font-weight:800;
-      flex-shrink:0;
-    }
-
-    .trust-box{
-      margin-top:24px;
-      padding:16px 18px;
-      background:#f8fafc;
-      border:1px solid var(--border);
-      border-radius:16px;
-    }
-
-    .trust-box strong{
-      display:block;
-      margin-bottom:8px;
-      font-size:0.92rem;
-    }
-
-    .trust-box p{
-      color:var(--muted);
-      font-size:0.84rem;
-      line-height:1.6;
-    }
-
-    footer{
-      text-align:center;
-      margin-top:22px;
-      color:var(--muted);
-      font-size:0.8rem;
-      line-height:1.6;
-    }
-
-    footer strong{
-      color:var(--text);
-      font-weight:700;
-    }
-
-    @media (max-width:600px){
-      .card{
-        padding:28px 18px;
-        border-radius:20px;
-      }
-
-      h1{
-        font-size:1.65rem;
-      }
-
-      .subtitle{
-        font-size:0.92rem;
-      }
-
-      .link-card{
-        padding:16px;
-      }
-    }
-  </style>
+  <title>CLVCA — Offline Voice Translation & Peer-to-Peer Chat App</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
 </head>
 <body>
 
-<div class="wrapper">
-  <div class="card">
+  <!-- Background Decorative Glowing Blurs -->
+  <div class="bg-glow glow-top-left"></div>
+  <div class="bg-glow glow-center"></div>
+  <div class="bg-glow glow-bottom-right"></div>
 
-    <div class="top-badge">● Official CLVCA Resources</div>
+  <div class="app-container">
+    
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo-group">
+        <img src="assets/icon_1024.png" alt="CLVCA Logo" class="app-logo" />
+        <div class="brand-name">CLVCA</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How it Works</a>
+        <a href="#demo" class="nav-link">Live Demo</a>
+        <a href="#support" class="nav-link">Support & Legal</a>
+      </nav>
+      <a href="#support" class="btn-nav-download">Help Center</a>
+    </header>
 
-    <div class="logo">CL</div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="badge-tag">Offline-First App</div>
+        <h1 class="hero-title">
+          Talk Globally,<br />
+          <span>Connect Locally.</span>
+        </h1>
+        <p class="hero-desc">
+          CLVCA (Cross-Language Voice Chat Application) is a revolutionary offline-first, peer-to-peer voice translation app. 
+          Communicate instantly across languages without internet access, cellular plans, or data logs.
+        </p>
+        <div class="cta-group">
+          <a href="#demo" class="btn-primary">
+            Try Live Demo &rarr;
+          </a>
+          <a href="#support" class="btn-secondary">
+            Legal & Support
+          </a>
+        </div>
+      </div>
+      
+      <!-- Premium Brand/Connection Visual -->
+      <div class="hero-visual">
+        <div class="logo-showcase-container">
+          <div class="radar-glow-ring ring-1"></div>
+          <div class="radar-glow-ring ring-2"></div>
+          <div class="radar-glow-ring ring-3"></div>
+          <div class="app-logo-hub">
+            <img src="assets/icon_1024.png" alt="CLVCA App Logo" class="showcase-logo-img" />
+          </div>
+          <div class="p2p-node node-1" title="Offline P2P Signal">📶</div>
+          <div class="p2p-node node-2" title="Voice Processing">🎙️</div>
+          <div class="p2p-node node-3" title="Privacy Secured">🔒</div>
+        </div>
+      </div>
+    </section>
 
-    <h1>CLVCA Policy & Support Center</h1>
+    <!-- Key Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <span class="section-subtitle">Core Features</span>
+        <h2 class="section-title">Engineered for Freedom & Privacy</h2>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">📶</div>
+          <h3 class="feature-title">Offline-First Translation</h3>
+          <p class="feature-desc">
+            Download local translation models once and communicate forever. No active internet, cellular connection, or Wi-Fi hotspot required to translate text and voice.
+          </p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🔗</div>
+          <h3 class="feature-title">Peer-to-Peer Voice Chat</h3>
+          <p class="feature-desc">
+            Link devices directly using local Bluetooth and Wi-Fi antennas. Speak to nearby friends or partners instantly with minimum latency and zero server reliance.
+          </p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🔒</div>
+          <h3 class="feature-title">Privacy-First Architecture</h3>
+          <p class="feature-desc">
+            Your voice and data are entirely yours. Since processing happens entirely on-device, no audio files, transcripts, or conversations are uploaded to any server.
+          </p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🎙️</div>
+          <h3 class="feature-title">High Quality TTS & STT</h3>
+          <p class="feature-desc">
+            Integration with high-accuracy speech processing systems. Select different accents, control speech rate, and enjoy realistic synthesized audio readouts.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <p class="subtitle">
-      Access our official privacy, legal, and support resources to understand how CLVCA protects your data and delivers a trusted user experience.
-    </p>
+    <!-- How it works (Conversation Modes Guide) -->
+    <section class="steps-section" id="how-it-works">
+      <div class="section-header">
+        <span class="section-subtitle">Interactive Guide</span>
+        <h2 class="section-title">Two Conversation Modes</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 15px;">
+          CLVCA offers two powerful, 100% offline modes tailored to any conversation setup. Share a single device or connect two nearby devices wirelessly.
+        </p>
+      </div>
 
-    <div class="section-label">Resources</div>
+      <div class="mode-toggle-container">
+        <div class="mode-toggle-pill">
+          <button class="mode-btn-tab active" id="btn-single" onclick="switchGuide('single')">Single Device</button>
+          <button class="mode-btn-tab" id="btn-p2p" onclick="switchGuide('p2p')">P2P Connection</button>
+        </div>
+      </div>
 
-    <div class="links">
+      <!-- Single Device Mode Guide -->
+      <div class="steps-timeline" id="guide-single">
+        <!-- Step 1 -->
+        <div class="step-item">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Set Your Languages</h3>
+          <p class="step-desc">Tap the language name at the top of each card to select who speaks what language.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="step-item">
+          <span class="step-num">02</span>
+          <h3 class="step-title">Adjust Voice Settings</h3>
+          <p class="step-desc">Tap the 'Tune' icon on any card to change speaking speed, pitch, or regional accents.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="step-item">
+          <span class="step-num">03</span>
+          <h3 class="step-title">Tap a Mic to Start</h3>
+          <p class="step-desc">Tap the microphone icon on a speaker's card to start listening. Speak naturally for best results.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="step-item">
+          <span class="step-num">04</span>
+          <h3 class="step-title">Manual Text Entry</h3>
+          <p class="step-desc">Use the keyboard icon if you prefer typing. Your message will be translated instantly.</p>
+        </div>
+        <!-- Step 5 -->
+        <div class="step-item">
+          <span class="step-num">05</span>
+          <h3 class="step-title">Hear the Translation</h3>
+          <p class="step-desc">The translation appears on the opposite card and plays automatically. Tap the speaker icon to replay it.</p>
+        </div>
+        <!-- Step 6 -->
+        <div class="step-item">
+          <span class="step-num">06</span>
+          <h3 class="step-title">Fullscreen View</h3>
+          <p class="step-desc">Tap the fullscreen icon for a large, rotated display—ideal for showing results to someone sitting across from you.</p>
+        </div>
+        <!-- Step 7 -->
+        <div class="step-item" style="grid-column: span 3; max-width: 450px; margin: 0 auto;">
+          <span class="step-num" style="display: block; text-align: center;">07</span>
+          <h3 class="step-title" style="text-align: center;">Use Auto Mode</h3>
+          <p class="step-desc" style="text-align: center;">Enable 'Auto' from the top bar for a hands-free conversation. It automatically switches microphone detection between speakers.</p>
+        </div>
+      </div>
 
-      <a href="privacy-policy.html" class="link-card">
-        <div class="left">
-          <div class="icon-box">🛡️</div>
-          <div class="text-group">
-            <div class="title">Privacy Policy</div>
-            <div class="desc">Learn how your data is handled and protected.</div>
+      <!-- P2P Connection Guide -->
+      <div class="steps-timeline" id="guide-p2p" style="display: none;">
+        <!-- Step 1 -->
+        <div class="step-item">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Wireless Setup</h3>
+          <p class="step-desc">Ensure Bluetooth and Wi-Fi are ON on both devices. No internet is required, just active wireless antennas.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="step-item">
+          <span class="step-num">02</span>
+          <h3 class="step-title">Start Hosting</h3>
+          <p class="step-desc">One person taps 'Start Hosting' to become visible. This generates a unique device name for others to search.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="step-item">
+          <span class="step-num">03</span>
+          <h3 class="step-title">Scan & Connect</h3>
+          <p class="step-desc">The other person taps 'Join Friend' and scans the Host's QR code or selects their name from the list to pair instantly.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="step-item">
+          <span class="step-num">04</span>
+          <h3 class="step-title">Secure Connection</h3>
+          <p class="step-desc">Once paired, a secure offline link is established, and you are both redirected to the private chat room.</p>
+        </div>
+        <!-- Step 5 -->
+        <div class="step-item">
+          <span class="step-num">05</span>
+          <h3 class="step-title">Personalize Settings</h3>
+          <p class="step-desc">Tap the 'Tune' icon in the chat to select your language, choose a regional accent, or adjust speed and pitch.</p>
+        </div>
+        <!-- Step 6 -->
+        <div class="step-item">
+          <span class="step-num">06</span>
+          <h3 class="step-title">Voice & Text Input</h3>
+          <p class="step-desc">Use the microphone for real-time speech translation or the keyboard to type. Messages appear instantly on both screens.</p>
+        </div>
+        <!-- Step 7 -->
+        <div class="step-item">
+          <span class="step-num">07</span>
+          <h3 class="step-title">Translation Quality</h3>
+          <p class="step-desc">A 'Bolt' icon indicates high-quality offline translation. If a 'Download' icon appears, tap to install the local language model.</p>
+        </div>
+        <!-- Step 8 -->
+        <div class="step-item">
+          <span class="step-num">08</span>
+          <h3 class="step-title">Session History</h3>
+          <p class="step-desc">All your P2P conversations are saved locally. Revisit them anytime from the 'Recent P2P Chats' on the home screen.</p>
+        </div>
+        <!-- Step 9 -->
+        <div class="step-item">
+          <span class="step-num">09</span>
+          <h3 class="step-title">End Session</h3>
+          <p class="step-desc">Tap the disconnect button to safely end the chat. This closes the wireless P2P link and preserves your privacy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section class="demo-section" id="demo">
+      <div class="section-header">
+        <span class="section-subtitle">Interactive Experience</span>
+        <h2 class="section-title">Try Instant Translation</h2>
+      </div>
+      
+      <div class="demo-widget">
+        <div class="demo-selector">
+          <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 8px;">Select a phrase to simulate on-device translation:</p>
+          <button class="demo-btn active" onclick="playDemo(0, this)">
+            <span>"Hello, where is the train station?"</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+          <button class="demo-btn" onclick="playDemo(1, this)">
+            <span>"Can you help me translate this speech?"</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+          <button class="demo-btn" onclick="playDemo(2, this)">
+            <span>"We do not need internet to communicate."</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+          <button class="demo-btn" onclick="playDemo(3, this)">
+            <span>"Protecting user privacy is our priority."</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+        </div>
+        
+        <div class="demo-display" id="demo-display-box">
+          <div class="demo-row">
+            <div class="demo-row-lang">Input Language (English)</div>
+            <div class="demo-row-text" id="demo-input-text">Hello, where is the train station?</div>
+          </div>
+          <div class="demo-row out" style="animation-delay: 0.6s;">
+            <div class="demo-row-lang" style="color: var(--accent);">Translated Output (Marathi)</div>
+            <div class="demo-row-text translation" id="demo-output-text">नमस्कार, रेल्वे स्टेशन कुठे आहे?</div>
           </div>
         </div>
-        <div class="arrow">→</div>
-      </a>
+      </div>
+    </section>
 
-      <a href="terms.html" class="link-card">
-        <div class="left">
-          <div class="icon-box">📜</div>
-          <div class="text-group">
-            <div class="title">Terms & Conditions</div>
-            <div class="desc">Review the rules and terms of app usage.</div>
-          </div>
-        </div>
-        <div class="arrow">→</div>
-      </a>
+    <!-- Support Center & Resource Section (Replacing the old link list) -->
+    <section class="resources-section" id="support">
+      <div class="section-header">
+        <span class="section-subtitle">Resources</span>
+        <h2 class="section-title">Support & Legal Center</h2>
+      </div>
+      
+      <div class="resources-grid">
+        <a href="privacy-policy.html" class="resource-card">
+          <div class="resource-icon">🛡️</div>
+          <h3 class="resource-title">
+            <span>Privacy Policy</span>
+            <span class="resource-arrow">&rarr;</span>
+          </h3>
+          <p class="resource-desc">
+            Understand how CLVCA stores and processes metadata locally on your smartphone.
+          </p>
+        </a>
 
-      <a href="help.html" class="link-card">
-        <div class="left">
-          <div class="icon-box">🛟</div>
-          <div class="text-group">
-            <div class="title">Help Center</div>
-            <div class="desc">Get support, FAQs, and troubleshooting help.</div>
-          </div>
-        </div>
-        <div class="arrow">→</div>
-      </a>
+        <a href="terms.html" class="resource-card">
+          <div class="resource-icon">📜</div>
+          <h3 class="resource-title">
+            <span>Terms of Service</span>
+            <span class="resource-arrow">&rarr;</span>
+          </h3>
+          <p class="resource-desc">
+            Read the terms and conditions regarding offline translation models and application usage.
+          </p>
+        </a>
 
-    </div>
+        <a href="help.html" class="resource-card">
+          <div class="resource-icon">🛟</div>
+          <h3 class="resource-title">
+            <span>Help Center & FAQ</span>
+            <span class="resource-arrow">&rarr;</span>
+          </h3>
+          <p class="resource-desc">
+            Solve problems, configure Speech Engines (TTS), and troubleshoot P2P connections.
+          </p>
+        </a>
+      </div>
+      
+      <div class="extra-links">
+        <a href="delete-account.html" class="extra-link">
+          ⚠️ Need to request Account Deletion? Click here &rarr;
+        </a>
+      </div>
+    </section>
 
-    <div class="trust-box">
-      <strong>Privacy-First Commitment</strong>
-      <p>
-        CLVCA is built with an offline-first approach. Most processing happens directly on your device, helping improve privacy and responsiveness.
-      </p>
-    </div>
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-brand">CLVCA by Satyam Studios</div>
+      <div class="footer-support">
+        Need assistance? Contact us at: <strong>clvca.official@gmail.com</strong>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 CLVCA App. All rights reserved. Built with privacy-first standards.
+      </div>
+    </footer>
 
   </div>
 
-  <footer>
-    © 2026 CLVCA by <strong>Satyam Studios</strong><br>
-    Official Documentation Portal
-  </footer>
-</div>
+  <!-- JavaScript to Handle Custom Translation Demo & Mode Toggles -->
+  <script>
+    // 1. Tab switching for Conversation Guides
+    function switchGuide(mode) {
+      const singleGuide = document.getElementById("guide-single");
+      const p2pGuide = document.getElementById("guide-p2p");
+      const btnSingle = document.getElementById("btn-single");
+      const btnP2P = document.getElementById("btn-p2p");
 
+      if (mode === 'single') {
+        singleGuide.style.display = 'grid';
+        p2pGuide.style.display = 'none';
+        btnSingle.classList.add('active');
+        btnP2P.classList.remove('active');
+      } else {
+        singleGuide.style.display = 'none';
+        p2pGuide.style.display = 'grid';
+        btnSingle.classList.remove('active');
+        btnP2P.classList.add('active');
+      }
+    }
+
+    // 2. Interactive Phrase Demo Widget
+    const demoPhrases = [
+      {
+        eng: "Hello, where is the train station?",
+        mar: "नमस्कार, रेल्वे स्टेशन कुठे आहे?"
+      },
+      {
+        eng: "Can you help me translate this speech?",
+        mar: "तुम्ही मला हे भाषण अनुवादित करण्यात मदत करू शकता का?"
+      },
+      {
+        eng: "We do not need internet to communicate.",
+        mar: "आपल्याला संवाद साधण्यासाठी इंटरनेटची आवश्यकता नाही."
+      },
+      {
+        eng: "Protecting user privacy is our priority.",
+        mar: "वापरकर्त्याच्या गोपनीयतेचे रक्षण करणे ही आमची प्राथमिकता आहे."
+      }
+    ];
+
+    const inputLabelText = document.getElementById("demo-input-text");
+    const outputLabelText = document.getElementById("demo-output-text");
+    const displayBox = document.getElementById("demo-display-box");
+
+    function playDemo(index, btnElement) {
+      // Remove active class from buttons
+      const buttons = document.querySelectorAll(".demo-btn");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      btnElement.classList.add("active");
+
+      // Animate display container refresh
+      displayBox.style.opacity = "0.5";
+      displayBox.style.transform = "scale(0.99)";
+      
+      setTimeout(() => {
+        const item = demoPhrases[index];
+        inputLabelText.innerText = item.eng;
+        outputLabelText.innerText = item.mar;
+        
+        displayBox.style.opacity = "1";
+        displayBox.style.transform = "scale(1)";
+      }, 250);
+    }
+  </script>
 </body>
 </html>
