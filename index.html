@@ -17,58 +17,78 @@
 
   <div class="app-container">
     
-    <!-- Navbar -->
     <header class="navbar">
-      <div class="logo-group">
-        <img src="assets/icon_1024.png" alt="CLVCA Logo" class="app-logo" />
-        <div class="brand-name">CLVCA</div>
-      </div>
-      <nav class="nav-links">
-        <a href="#features" class="nav-link">Features</a>
-        <a href="#how-it-works" class="nav-link">How it Works</a>
-        <a href="#demo" class="nav-link">Live Demo</a>
-        <a href="#support" class="nav-link">Support & Legal</a>
-      </nav>
-      <a href="#support" class="btn-nav-download">Help Center</a>
-    </header>
+  <div class="logo-group">
+    <img src="assets/icon_1024.png" alt="CLVCA Logo" class="app-logo" />
+    <div class="brand-name">CLVCA</div>
+  </div>
+  <nav class="nav-links">
+    <a href="#features" class="nav-link">Features</a>
+    <a href="#how-it-works" class="nav-link">How it Works</a>
+    <a href="#demo" class="nav-link">Live Demo</a>
+    <a href="#support" class="nav-link">Support & Legal</a>
+  </nav>
+  <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+    <a href="#support" class="btn-nav-help">Help Center</a>
+    <a href="https://play.google.com/store/apps/details?id=com.satyamstudios.clvca" target="_blank" class="btn-nav-download">Download App</a>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="badge-tag">Offline-First App</div>
-        <h1 class="hero-title">
-          Talk Globally,<br />
-          <span>Connect Locally.</span>
-        </h1>
-        <p class="hero-desc">
-          CLVCA (Cross-Language Voice Chat Application) is a revolutionary offline-first, peer-to-peer voice translation app. 
-          Communicate instantly across languages without internet access, cellular plans, or data logs.
-        </p>
-        <div class="cta-group">
-          <a href="#demo" class="btn-primary">
-            Try Live Demo &rarr;
-          </a>
-          <a href="#support" class="btn-secondary">
-            Legal & Support
-          </a>
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="badge-tag">Offline-First App</div>
+    <h1 class="hero-title">
+      Talk Globally,<br />
+      <span>Connect Locally.</span>
+    </h1>
+    <p class="hero-desc">
+      CLVCA (Cross-Language Voice Chat Application) is a revolutionary offline-first, peer-to-peer voice translation app. 
+      Communicate instantly across languages without internet access, cellular plans, or data logs.
+    </p>
+    <div class="cta-group">
+      <!-- Premium Play Store Badge Card -->
+      <a href="https://play.google.com/store/apps/details?id=com.satyamstudios.clvca" target="_blank" class="play-store-badge-card">
+        <div class="play-store-glow"></div>
+        <svg class="play-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.22852 2.15869C3.06852 2.31869 2.97852 2.58869 2.97852 2.92869V21.0787C2.97852 2.41869 3.06852 2.68869 3.22852 2.84869L3.30852 2.91869L13.4385 12.7987V13.0487L3.30852 22.9287L3.22852 22.9987C3.06852 23.1587 2.97852 23.4287 2.97852 23.7687" fill="url(#play_grad_1)"/>
+          <path d="M16.8285 16.1887L13.4385 12.9187V12.6687L16.8285 9.39868L16.9185 9.44868L20.9385 11.7387C22.0885 12.3887 22.0885 13.4487 20.9385 14.1087L16.9185 16.3987L16.8285 16.1887Z" fill="url(#play_grad_2)"/>
+          <path d="M16.9185 9.44868L13.4385 12.7987L3.30852 2.91869C3.64852 2.55869 4.22852 2.53869 4.90852 2.92869L16.9185 9.44868Z" fill="url(#play_grad_3)"/>
+          <path d="M16.9185 16.3987L4.90852 22.9187C4.22852 23.3087 3.64852 23.2887 3.30852 22.9287L13.4385 13.0487L16.9185 16.3987Z" fill="url(#play_grad_4)"/>
+          <defs>
+            <linearGradient id="play_grad_1" x1="2.97852" y1="12.9787" x2="13.4385" y2="12.9787" gradientUnits="userSpaceOnUse"><stop stop-color="#00A0FF"/><stop offset="1" stop-color="#00A1FF"/></linearGradient>
+            <linearGradient id="play_grad_2" x1="21.4385" y1="12.9787" x2="13.4385" y2="12.9787" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE000"/><stop offset="1" stop-color="#FFB300"/></linearGradient>
+            <linearGradient id="play_grad_3" x1="3.30852" y1="2.91869" x2="16.9185" y2="9.44868" gradientUnits="userSpaceOnUse"><stop stop-color="#00F076"/><stop offset="1" stop-color="#04C963"/></linearGradient>
+            <linearGradient id="play_grad_4" x1="3.30852" y1="22.9287" x2="16.9185" y2="16.3987" gradientUnits="userSpaceOnUse"><stop stop-color="#FF3A44"/><stop offset="1" stop-color="#E31E24"/></linearGradient>
+          </defs>
+        </svg>
+        <div class="badge-text-group">
+          <span class="badge-sub">GET IT ON</span>
+          <span class="badge-main">Google Play</span>
         </div>
+      </a>
+
+      <!-- Secondary Glass Button -->
+      <a href="#demo" class="btn-secondary-glass">
+        <span>Try Live Demo</span>
+        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+  
+  <div class="hero-visual">
+    <div class="logo-showcase-container">
+      <div class="radar-glow-ring ring-1"></div>
+      <div class="radar-glow-ring ring-2"></div>
+      <div class="radar-glow-ring ring-3"></div>
+      <div class="app-logo-hub">
+        <img src="assets/icon_1024.png" alt="CLVCA App Logo" class="showcase-logo-img" />
       </div>
-      
-      <!-- Premium Brand/Connection Visual -->
-      <div class="hero-visual">
-        <div class="logo-showcase-container">
-          <div class="radar-glow-ring ring-1"></div>
-          <div class="radar-glow-ring ring-2"></div>
-          <div class="radar-glow-ring ring-3"></div>
-          <div class="app-logo-hub">
-            <img src="assets/icon_1024.png" alt="CLVCA App Logo" class="showcase-logo-img" />
-          </div>
-          <div class="p2p-node node-1" title="Offline P2P Signal">📶</div>
-          <div class="p2p-node node-2" title="Voice Processing">🎙️</div>
-          <div class="p2p-node node-3" title="Privacy Secured">🔒</div>
-        </div>
-      </div>
-    </section>
+      <div class="p2p-node node-1" title="Offline P2P Signal">📶</div>
+      <div class="p2p-node node-2" title="Voice Processing">🎙️</div>
+      <div class="p2p-node node-3" title="Privacy Secured">🔒</div>
+    </div>
+  </div>
+</section>
 
     <!-- Key Features Section -->
     <section class="features-section" id="features">
