@@ -1,0 +1,25 @@
+{
+  "name": "CLVCA - Cross-Language Voice Chat",
+  "short_name": "CLVCA",
+  "icons": [
+    {
+      "src": "/clvca-app/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/clvca-app/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#090e1a",
+  "background_color": "#090e1a",
+  "display": "standalone",
+  "start_url": "/clvca-app/",
+  "scope": "/clvca-app/",
+  "description": "Offline-first voice translation and peer-to-peer chat for nearby conversations.",
+  "orientation": "portrait-primary"
+}
