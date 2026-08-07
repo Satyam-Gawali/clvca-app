@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon_1024.png" width="120" height="120" style="border-radius: 28px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);" alt="CLVCA Logo" />
+  <img src="assets/images/icon_1024.png" width="120" height="120" style="border-radius: 28px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);" alt="CLVCA Logo" />
 </p>
 
 <h1 align="center">CLVCA</h1>
