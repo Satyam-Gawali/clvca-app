@@ -3,13 +3,13 @@
   "short_name": "CLVCA",
   "icons": [
     {
-      "src": "/clvca-app/web-app-manifest-192x192.png",
+      "src": "/clvca-app/assets/icons/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/clvca-app/web-app-manifest-512x512.png",
+      "src": "/clvca-app/assets/icons/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
